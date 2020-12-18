@@ -7,7 +7,6 @@ class Acciones
 	public function Mostrar(){
 		$date=new Conexion();
 		$conexion=$date->Conectar();
-	
 		$consulta = "SELECT * FROM tproductos";
         $resultado = $conexion->prepare($consulta);
         $resultado->execute();
