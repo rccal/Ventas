@@ -13,6 +13,7 @@ class Acciones
         $data = $resultado->fetchAll(PDO::FETCH_ASSOC);
         return $data;
 	}
+	
 
 
 	
