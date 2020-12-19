@@ -40,7 +40,7 @@
                             <input type="hidden" name="precio" id="precio" value="<?php echo openssl_encrypt($item['Precio'],CODE,KEY);?>">
                             <input type="hidden" name="cantidad" id="cantidad" value="<?php echo openssl_encrypt(1,CODE,KEY);?>">
 
-                            <input type="submit" class="btn btn-dark" value="Agregar">
+                            <input type="submit" name="btnagregar" class="btn btn-dark" value="Agregar">
                         </form>
                       </div>
                     </div>
