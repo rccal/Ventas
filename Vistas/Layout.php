@@ -1,3 +1,4 @@
+<?php include_once '../Controladores/Carrito.php';?>
 <!DOCTYPE html>
 <html lang="en">
 <head>

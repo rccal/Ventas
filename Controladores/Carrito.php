@@ -55,8 +55,7 @@
                         );
                         $_SESSION['Carrito'][$numPro]=$Producto;
                     }
-                    $mensaje=var_dump($_SESSION['Carrito'],true);
-
+                    $mensaje=$_SESSION['Carrito'];
                     break;
                 }
             }

@@ -23,12 +23,17 @@ include_once '../Controladores/config.php';
         </tr>
         </thead>
         <tbody>
+            <?php foreach ($pruebacarrito as $indice => $produc) {
+                ?>
             <tr>
-                <td >eeee</td>
-                <td>esddd</td>
-                <td>sedr</td>
+                <td ><?php echo $produc['id'] ?></td>
+                <td><?php echo $produc['nombre'] ?></td>
+                <td>$<?php echo $produc['precio'] ?></td>
+                <td><?php echo $produc['cantidad'] ?></td>
                 <td><button class="btn btn-danger" type="button">Eliminar</button></td>
             </tr>
+            <?php
+            } ?>
             <tr>
                 <td colspan="3" align="right"><h3>Total</h3></td>
                 <td align="right"><h3>$<?php echo number_format(300,2) ?></h3></td>
