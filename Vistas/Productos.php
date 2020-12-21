@@ -29,11 +29,11 @@
             	<div class="col-3">
                 
                     <div class="card text-white bg-primary">
-                      <img  class="card-img-top" src="../img/<?php echo $item['Imagen'] ?>"  data-toggle="popover" title="<?php echo $item['Detalle']; ?>"  >
+                      <img height="317px" class="card-img-top" src="../img/<?php echo $item['Imagen'] ?>"  data-toggle="popover" title="<?php echo $item['Detalle']; ?>"  >
                       <div class="card-body">
                         <h4 class="card-title"> <?php echo $item['Nombre']?></h4>
                         <p class="card-text">Precio: $<?php echo $item['Precio'] ?></p>
-                        <form action="">
+                        <form action="Carrito.php" method="POST">
                             <!--formulario para enviar los datos encriptados-->
                             <input type="hidden" name="id" id="id" value="<?php echo openssl_encrypt($item['id'],CODE,KEY); ?>" >
                             <input type="hidden" name="nombre" id="nombre" value="<?php echo openssl_encrypt($item['Nombre'],CODE,KEY); ?>">
