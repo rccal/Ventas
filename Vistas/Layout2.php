@@ -15,7 +15,7 @@
             <a href="#" class="nav-link active">Inicio</a>
         </li>
         <li class="nav-item">
-            <a href="Vistas/Productos.php" class="nav-link ">Productos</a>
+            <a href="../Vistas/Productos.php" class="nav-link ">Productos</a>
         </li>
         <li class="nav-item">
             <a href="" class="nav-link ">Nosotros</a>
@@ -25,10 +25,6 @@
             echo(empty($_SESSION['Carrito']))?0:count($_SESSION['Carrito']);
              ?>)</a>
         </li>
-       
-        
-      
-       
     </ul>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>

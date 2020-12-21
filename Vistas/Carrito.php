@@ -1,14 +1,9 @@
 <?php
-include_once 'Layout.php'; 
+include_once 'Layout2.php'; 
 include_once '../Controladores/Carrito.php'; 
-include_once '../Controladores/config.php';
-    $boton=$_POST['btnagregar'];
-    $id=openssl_decrypt($_POST['id'],CODE,KEY);
-    $nombre=openssl_decrypt($_POST['nombre'],CODE,KEY);
-    $precio=openssl_decrypt($_POST['precio'],CODE,KEY);
-    $cantidad=openssl_decrypt($_POST['cantidad'],CODE,KEY);
-    $carrito=new carrito();
-    $pruebacarrito=$carrito->add($boton,$id,$nombre,$precio,$cantidad);
+include_once '../Controladores/config.php'; 
+
+  
     
 ?>
 <h3>Lista del carrito</h3>
@@ -23,20 +18,29 @@ include_once '../Controladores/config.php';
         </tr>
         </thead>
         <tbody>
-            <?php foreach ($pruebacarrito as $indice => $produc) {
+            <?php 
+            $total=0; ?>
+            <?php foreach ($_SESSION['Carrito'] as $indice => $produc) {
                 ?>
             <tr>
-                <td ><?php echo $produc['id'] ?></td>
                 <td><?php echo $produc['nombre'] ?></td>
-                <td>$<?php echo $produc['precio'] ?></td>
                 <td><?php echo $produc['cantidad'] ?></td>
-                <td><button class="btn btn-danger" type="button">Eliminar</button></td>
+                <td>$<?php echo $produc['precio'] ?></td>
+                <td>$<?php echo number_format($produc['precio']*$produc['cantidad'],2);?></td>
+                <td> <form action="" method="post">
+                    <input type="hidden" name="id" id="id" value="<?php echo openssl_encrypt($produc['id'],CODE,KEY); ?>" >
+                    
+                    <button class="btn btn-danger" name="btnagregar" type="submit" value="Eliminar">Eliminar</button></td>
+                    
+                </form>
+                    
             </tr>
+            <?php $total=$total + ($produc['precio']*$produc['cantidad']); ?>
             <?php
             } ?>
             <tr>
                 <td colspan="3" align="right"><h3>Total</h3></td>
-                <td align="right"><h3>$<?php echo number_format(300,2) ?></h3></td>
+                <td align="right"><h3>$<?php echo number_format($total,2) ?></h3></td>
             </tr>
             
         </tbody>
