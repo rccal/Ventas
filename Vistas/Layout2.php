@@ -12,7 +12,7 @@
     
     <ul class="nav nav-tabs">
         <li class="nav-item">
-            <a href="#" class="nav-link active">Inicio</a>
+            <a href="#" class="nav-link ">Inicio</a>
         </li>
         <li class="nav-item">
             <a href="../Vistas/Productos.php" class="nav-link ">Productos</a>
