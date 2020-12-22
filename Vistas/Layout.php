@@ -11,6 +11,7 @@
 <body>
     
     <ul class="nav nav-tabs">
+        
         <li class="nav-item">
             <a href="../index.php" class="nav-link ">Inicio</a>
         </li>

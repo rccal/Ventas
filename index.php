@@ -6,19 +6,12 @@ include_once 'Vistas/LayoutIndex.php';
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/Style.css">
+    <link rel="stylesheet" href="css/Style.css">
     <title>Home</title>
 </head>
 <body>
     <!--navegador-->
-    <nav> 
-        <ul>
-            <li><a href="Home.php">Inicio</a></li>
-            <li><a href="Productos.php">Productos</a></li>
-            <li><a href="Nosotros.php">Nosotros</a></li>
-            <li><a href="Carrito">Carrito de Compras</a></li>
-        </ul>    
-    </nav>
+   
     <!--buscador del navegador-->
     <div class="baner">
         <form action="" method="post" >
