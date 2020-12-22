@@ -42,6 +42,23 @@ include_once '../Controladores/config.php';
                 <td colspan="3" align="right"><h3>Total</h3></td>
                 <td align="right"><h3>$<?php echo number_format($total,2) ?></h3></td>
             </tr>
+            <tr>
+                <td colspan="5">
+                    <form action="pago.php" method="post">
+                        <div class="alert alert-success" role="alert">
+                            <div class="form-group">
+                                <label for="my-input">Correo de Contacto:</label>
+                                <input type="email" name="email" id="email" class="form-control" placeholder="Escribe tu correo" aria-describedby="helpId" required>
+                      
+                            </div>
+                            <small id="emailHelp" class="form-text text-muted"> los productos se enviaran a este correo</small>
+                            
+                        </div>
+                        <button class="btn btn-primary btn-lg  btn-block" type="submit" name="btnagregar" value="Pagar"> Proceder a pagar >></button>
+                        
+                    </form>
+                </td>
+            </tr>
             
         </tbody>
 </table>

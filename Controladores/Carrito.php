@@ -48,17 +48,25 @@ include_once '../Controladores/config.php';
 
                 );
                 $_SESSION['Carrito'][0]=$Producto;
+                $mensaje="Producto agregado exitosamente";
             }
             else{
-                $numPro=count($_SESSION['Carrito']);
-                $Producto=array(
-                    'id'=>$id,
-                    'nombre'=>$nombre,
-                    'precio'=>$precio,
-                    'cantidad'=>$cantidad,
+                $idPro=array_column($_SESSION['Carrito'],"id");
+                if (in_array($id,$idPro)) {
+                   echo "<script>alert('El producto ya a sido seleccionado');</script>";
+                }
+                else{
+                    $numPro=count($_SESSION['Carrito']);
+                    $Producto=array(
+                        'id'=>$id,
+                        'nombre'=>$nombre,
+                        'precio'=>$precio,
+                        'cantidad'=>$cantidad,
 
-                );
+                    );
                 $_SESSION['Carrito'][$numPro]=$Producto;
+                $mensaje="Producto agregado exitosamente";
+                }
             }
             
             break;
