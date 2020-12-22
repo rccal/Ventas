@@ -18,9 +18,7 @@
  </head>
  <body>
  <div class="container">
-        <div class="alert alert-success">
-            <p>mensaje</p>
-        </div>
+       
               <div align="center">
               <h2 class="text-center"></h2>
               <div class="row">
