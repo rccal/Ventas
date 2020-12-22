@@ -18,7 +18,7 @@
             <a href="Vistas/Productos.php" class="nav-link ">Productos</a>
         </li>
         <li class="nav-item">
-            <a href="" class="nav-link ">Nosotros</a>
+            <a href="Nosotros.php" class="nav-link ">Nosotros</a>
         </li>
         <li class="nav-item">
             <a href="Carrito.php" class="nav-link ">Carrito de compras(<?php
