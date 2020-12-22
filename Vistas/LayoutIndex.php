@@ -1,4 +1,4 @@
-<?php include_once '../Controladores/Carrito.php';  ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,7 +12,7 @@
     
     <ul class="nav nav-tabs">
         <li class="nav-item">
-            <a href="../index.php" class="nav-link ">Inicio</a>
+            <a href="index.php" class="nav-link ">Inicio</a>
         </li>
         <li class="nav-item">
             <a href="Vistas/Productos.php" class="nav-link ">Productos</a>
@@ -21,7 +21,7 @@
             <a href="" class="nav-link ">Nosotros</a>
         </li>
         <li class="nav-item">
-            <a href="Carrito.php" class="nav-link ">Carrito de compras(<?php
+            <a href="/Controladores/Carrito.php" class="nav-link ">Carrito de compras(<?php
             echo(empty($_SESSION['Carrito']))?0:count($_SESSION['Carrito']);
              ?>)</a>
         </li>

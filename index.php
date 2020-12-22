@@ -1,3 +1,3 @@
 <?php
-include_once 'Vistas/Layout.php';
+include_once 'Vistas/LayoutIndex.php';
 ?>
